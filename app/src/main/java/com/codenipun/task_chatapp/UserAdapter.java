@@ -1,6 +1,7 @@
 package com.codenipun.task_chatapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,7 +46,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
         Picasso.get().load(users.getProfile()).placeholder(R.drawable.user).into(holder.image);
         holder.userName.setText(users.getUname());
 
-
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ChatActivity.class);
+                context.startActivity(intent);
+            }
+        });
 
         // work for last message
     }
