@@ -43,10 +43,10 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
 
-        if(mAuth.getCurrentUser()!=null){
-            startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            finishAffinity();
-        }
+//        if(mAuth.getCurrentUser()!=null){
+//            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+//            finishAffinity();
+//        }
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
 //                    Log.d(TAG, "signInWithCredential:success");
 
                     FirebaseUser user = task.getResult().getUser();
-                    UserModel firebaseUser = new UserModel(user.getDisplayName(),user.getUid(), user.getPhotoUrl().toString());
+                    UserModel firebaseUser = new UserModel(user.getDisplayName(), user.getUid(), user.getPhotoUrl().toString());
                     database.getReference().child("Profiles").child(user.getUid())
                             .setValue(firebaseUser).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
