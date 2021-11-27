@@ -3,12 +3,12 @@ package com.codenipun.task_chatapp.Models;
 public class UserModel {
     String Uname;
     String Uid;
-    String profile;
+    String Uprofile;
 
     public UserModel(String uname, String uid, String profile) {
         Uname = uname;
         Uid = uid;
-        this.profile = profile;
+        this.Uprofile = profile;
     }
 
     public String getUname() {
@@ -28,10 +28,10 @@ public class UserModel {
     }
 
     public String getProfile() {
-        return profile;
+        return Uprofile;
     }
 
     public void setProfile(String profile) {
-        this.profile = profile;
+        this.Uprofile = profile;
     }
 }
