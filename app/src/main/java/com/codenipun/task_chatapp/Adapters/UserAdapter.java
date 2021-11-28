@@ -1,8 +1,7 @@
-package com.codenipun.task_chatapp;
+package com.codenipun.task_chatapp.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,12 +9,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
+import com.codenipun.task_chatapp.Activities.ChatActivity;
 import com.codenipun.task_chatapp.Models.UserModel;
-import com.google.firebase.database.FirebaseDatabase;
+import com.codenipun.task_chatapp.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -50,6 +48,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, ChatActivity.class);
+                intent.putExtra("name", users.getUname());
+                intent.putExtra("id", users.getUid());
+                intent.putExtra("profilePic", users.getProfile());
                 context.startActivity(intent);
             }
         });

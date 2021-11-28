@@ -1,17 +1,16 @@
-package com.codenipun.task_chatapp;
+package com.codenipun.task_chatapp.Activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.Menu;
 
 import com.codenipun.task_chatapp.Models.UserModel;
+import com.codenipun.task_chatapp.R;
+import com.codenipun.task_chatapp.Adapters.UserAdapter;
 import com.codenipun.task_chatapp.databinding.ActivityMainBinding;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
