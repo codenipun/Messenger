@@ -8,58 +8,48 @@
     tools:context=".Activities.ChatActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="55dp"
-        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/typeMessage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+
+    <LinearLayout
+        android:id="@+id/typeMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="10dp"
-        android:padding="20dp"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/circular_bg"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:hint="Type a Message....."
+            android:paddingLeft="10dp"></EditText>
 
-
-            <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_weight="1"
-                android:clickable="true"
-                android:cursorVisible="false"
-                android:ems="10"
-                android:hint="Type a message.........."
-                android:inputType="textPersonName"
-                android:textIsSelectable="true" />
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_gravity="center"
-                android:layout_marginRight="6dp"
-                app:srcCompat="@drawable/ic_send1" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/sendbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="2dp"
+            android:src="@drawable/ic_send1" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,9 @@ public class UserModel {
     String Uname;
     String Uid;
     String profile;
+//    String status;
+
+
 
     public UserModel(String uname, String uid, String profile) {
         Uname = uname;
@@ -34,4 +37,11 @@ public class UserModel {
     public void setProfile(String profile) {
         this.profile = profile;
     }
+//    public String getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(String status) {
+//        this.status = status;
+//    }
 }

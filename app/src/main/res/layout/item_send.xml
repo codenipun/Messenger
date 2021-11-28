@@ -19,6 +19,7 @@
         android:maxWidth="310dp"
         android:maxHeight="400dp"
         android:minHeight="30dp"
+        android:paddingRight="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -41,21 +42,16 @@
             android:inputType="textLongMessage|textMultiLine"
             android:maxWidth="270dp"
             android:minWidth="50dp"
-            android:text="TextView"
+            android:text="hlkjhajsfkj;ladfjakdsjflkjsahdf;lkjsadfjhaskdfjhsakjdhflksajdhflkajshdflkjsahflkjhalhlsakjdhflksahjlkjh"
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/sendersTime"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.8" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
